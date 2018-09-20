@@ -16,7 +16,7 @@ client.on('ready', () => {
 
         client.on("message", message => {
 
-                                if (message.content === q1 ) {
+                                if (message.content === +q1 ) {
                           message.react('🔊')
             const voiceChannel = message.member.voiceChannel;
             if (!voiceChannel) {
