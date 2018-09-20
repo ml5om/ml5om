@@ -18,27 +18,6 @@ client.on('ready', () => {
 });
 
 
-     function commandIs(str, msg){
-            return msg.content.toLowerCase().startsWith('+' + str);
-        }
-
-        function pluck(array) {
-            return array.map(function(item) { return item['name']; });
-        }
-
-        function hasRole(mem, role) {
-            if(pluck(mem.roles).includes(role)){
-                return true;
-            } else {
-                return false;
-            }
-
-          }
-
-
-
-
-
         var servers = {};
 
 
@@ -76,7 +55,7 @@ client.on('ready', () => {
         //sowar
 
 
-        client.on("message", message => {
+        Rocket.on("message", message => {
 
                                 if (message.content === q1 ) {
                           message.react('🔊')
