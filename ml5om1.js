@@ -6,7 +6,6 @@ const yt = require('ytdl-core');
 const prefix = ("+")
 const child_process = require("child_process");
 const ownerid = ('280749272498962432')
-const canvas = require("canvas-prebuilt")
 const fs = require('fs')
 const moment = require("moment");
 
