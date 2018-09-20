@@ -46,7 +46,7 @@ const prefix = '*';
         //sowar
 
 
-        Rocket.on("message", message => {
+        client.on("message", message => {
 
                                 if (message.content === q1 ) {
                           message.react('🔊')
