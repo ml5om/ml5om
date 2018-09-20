@@ -14,36 +14,76 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-client.on('message', message => {
-const yt = require('ytdl-core');
-  if (message.content.startsWith('+quran')) {
-              if(!message.channel.guild) return message.reply('** This command only for servers **');
+        client.on("message", message => {
 
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply(`من فضلك ادخل روم صوتي `);
-    }
-    voiceChannel.join()
-      .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=9-oGnGaI9Ps&t=8009s', {audioonly: true});
-        const dispatcher = connnection.playStream(stream);
-        dispatcher.on('end', () => {
-          voiceChannel.leave();
+                                if (message.content === q1 ) {
+                          message.react('🔊')
+            const voiceChannel = message.member.voiceChannel;
+            if (!voiceChannel) {
+              return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+            }
+            voiceChannel.join()
+              .then(connnection => {
+                let stream = yt('https://www.youtube.com/watch?v=V4b9f9BQTKI', {audioonly: true});
+                const dispatcher = connnection.playStream(stream);
+              });
+          }
+
+                                  if (message.content === q2 ) {
+                          message.react('🔊')
+            const voiceChannel = message.member.voiceChannel;
+            if (!voiceChannel) {
+              return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+            }
+            voiceChannel.join()
+              .then(connnection => {
+                let stream = yt('https://youtu.be/0m02xNtR8gA', {audioonly: true});
+                const dispatcher = connnection.playStream(stream);
+              });
+          }
+
+                                    if (message.content === q3 ) {
+                          message.react('🔊')
+            const voiceChannel = message.member.voiceChannel;
+            if (!voiceChannel) {
+              return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+            }
+            voiceChannel.join()
+              .then(connnection => {
+                let stream = yt('https://www.youtube.com/watch?v=4JvY-MccxNk', {audioonly: true});
+                const dispatcher = connnection.playStream(stream);
+              });
+          }
+
+                                      if (message.content === q4 ) {
+                          message.react('🔊')
+            const voiceChannel = message.member.voiceChannel;
+            if (!voiceChannel) {
+              return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+            }
+            voiceChannel.join()
+              .then(connnection => {
+                let stream = yt('https://www.youtube.com/watch?v=Ktync4j_nmA', {audioonly: true});
+                const dispatcher = connnection.playStream(stream);
+                });
+          }
+
+
+
+            //outher_cummon
+
+
+          if(message.content === "+qstop" ) {
+                          var servers = {};
+
+                    if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+
+          }
+
+
+
         });
-      });
-  }
-  
-  if (message.content.startsWith('+stop')) {
-              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply(`من فضلك ادخل روم صوتي `);
-    }
-voiceChannel.leave();
-  }
-
-});
 
    
 client.login(process.env.BOT_TOKEN);
