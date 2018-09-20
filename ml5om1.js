@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-const prefix = "10"
+const prefix = "1"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
 	
@@ -315,7 +315,7 @@ client.on('message', function(message) {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("10")) {
+             if (message.content.startsWith("1")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
