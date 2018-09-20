@@ -1,17 +1,14 @@
-const Discord = require("discord.js");
-const ytdl = require("ytdl-core");
+const Discord = require('discord.js');
 const Rocket = new Discord.Client();
-const { Client, Util } = require('discord.js');
-const getYoutubeID = require('get-youtube-id');
-const fetchVideoInfo = require('youtube-info');
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
-const queue = new Map();
-const client = new Discord.Client();
 const jimp = require("jimp");// npm i jimp
-const moment = require("moment");
 const package = ('package.json');
-
+const yt = require('ytdl-core');
+const prefix = ("+")
+const child_process = require("child_process");
+const ownerid = ('280749272498962432')
+const canvas = require("canvas-prebuilt")
+const fs = require('fs')
+const moment = require("moment");
 
 
 
