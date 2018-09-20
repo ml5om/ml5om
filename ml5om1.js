@@ -1,14 +1,12 @@
-const Discord = require('discord.js');
-const Rocket = new Discord.Client();
-const jimp = require("jimp");// npm i jimp
-const package = ('package.json');
-const yt = require('ytdl-core');
-const prefix = ("+")
-const child_process = require("child_process");
-const ownerid = ('280749272498962432')
-const fs = require('fs')
-const moment = require("moment");
-
+const Discord = require("discord.js");
+const ytdl = require("ytdl-core");
+const { Client, Util } = require('discord.js');
+const getYoutubeID = require('get-youtube-id');
+const fetchVideoInfo = require('youtube-info');
+const YouTube = require('simple-youtube-api');
+const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
+const queue = new Map();
+const client = new Discord.Client();
 
 
 client.on('ready', () => {
@@ -16,6 +14,27 @@ client.on('ready', () => {
   console.log(' Bot Is Online')
   console.log('---------------')
 });
+
+
+        function commandIs(str, msg){
+            return msg.content.toLowerCase().startsWith('+' + str);
+        }
+
+        function pluck(array) {
+            return array.map(function(item) { return item['name']; });
+        }
+
+        function hasRole(mem, role) {
+            if(pluck(mem.roles).includes(role)){
+                return true;
+            } else {
+                return false;
+            }
+
+          }
+
+
+
 
 
         var servers = {};
