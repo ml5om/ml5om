@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
+const Rocket = new Discord.Client();
 const { Client, Util } = require('discord.js');
 const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
@@ -7,6 +8,12 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const client = new Discord.Client();
+const jimp = require("jimp");// npm i jimp
+const moment = require("moment");
+const package = ('package.json');
+
+
+
 
 client.on('ready', () => {
   console.log('---------------');
