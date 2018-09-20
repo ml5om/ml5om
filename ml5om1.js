@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-        client.on("message", message => {
+        Rocket.on("message", message => {
 
                                 if (message.content === +q1 ) {
                           message.react('🔊')
@@ -86,4 +86,4 @@ client.on('ready', () => {
 
 
    
-client.login(process.env.BOT_TOKEN);
+Rocket.login(process.env.BOT_TOKEN);
