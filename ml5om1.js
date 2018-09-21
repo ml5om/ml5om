@@ -257,7 +257,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on('message', function(message) {
-	const myID = "389505536090963970";
+	const myID = "419183020000542723";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -339,3 +339,6 @@ let args = message.content.split(' ').slice(1).join(' ');
         
 }
 });
+
+   
+client.login(process.env.BOT_TOKEN);
